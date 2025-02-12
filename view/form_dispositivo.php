@@ -32,7 +32,7 @@
 
         $dispositivoController->adicionarDispositivo($_POST["nome"], $_POST["potencia"], $_POST["tempo_uso"]);
 
-        header("location: ../index.php");
+        header("location: listar_dispositivos.php");
     }
     ?>
 

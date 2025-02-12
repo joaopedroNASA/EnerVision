@@ -14,17 +14,17 @@
         <input type="text" name="nome_usuario" placeholder="Nome">
         <input type="text" name="email_usuario" placeholder="Email">
         <input type="text" name="senha_usuario" placeholder="Senha">
-        <button type="submit">Cadastar</button>
+        <button type="submit">Cadastrar</button>
     </form>
 
     <?php
     require_once 'C:\Turma2\xampp\htdocs\EnerVsion\config.php';
     require_once 'C:\Turma2\xampp\htdocs\EnerVsion\controller\DispositivoController.php';
 
-    if (isset($_POST["nome_usuario"]) && isset($_POST["email_usuario"]) && isset($_POST["senha_usario"])) {
+    if (isset($_POST["nome_usuario"]) && isset($_POST["email_usuario"]) && isset($_POST["senha_usuario"])) {
         $dispositivoController = new DispositivoController($pdo);
 
-        $dispositivoController->cadastrar($_POST["nome_usuario"], $_POST["email_usuario"], $_POST["senha_usario"]);
+        $dispositivoController->cadastrar($_POST["nome_usuario"], $_POST["email_usuario"], $_POST["senha_usuario"]);
 
         header("location: ../index.php");
     }
