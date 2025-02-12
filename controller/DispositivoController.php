@@ -11,10 +11,10 @@ class DispositivoController {
 
     public function cadastrar() {
         if ($_SERVER["REQUEST_METHOD"] === "POST") {
-            $nome = $_POST["nome"];
-            $email = $_POST["email"];
-            $senha = $_POST["senha"];
-            if ($this->dispositivo->cadastrar($nome, $email, $senha)) {
+            $nome_usuario = $_POST["nome"];
+            $email_usuario = $_POST["email"];
+            $senha_usuario = $_POST["senha"];
+            if ($this->dispositivo->cadastrar($nome_usuario, $email_usuario, $senha_usuario)) {
                 echo "Usuário cadastrado com sucesso!";
             } else {
                 echo "Erro ao cadastrar usuário!";
@@ -24,10 +24,10 @@ class DispositivoController {
 
     public function login() {
         if ($_SERVER["REQUEST_METHOD"] === "POST") {
-            $email = $_POST["email"];
-            $senha = $_POST["senha"];
-            if ($this->dispositivo->login($email, $senha)) {
-                header("Location: dashboard.php");
+            $email_usuario = $_POST["email"];
+            $senha_usuario = $_POST["senha"];
+            if ($this->dispositivo->login($email_usuario, $senha_usuario)) {
+                header("Location: view/cadastrar.php");
             } else {
                 echo "Login inválido!";
             }
@@ -37,13 +37,13 @@ class DispositivoController {
     public function logout() {
         session_start();
         session_destroy();
-        header("Location: login.php");
+        header("Location: view/login.php");
     }
 
     public function adicionarDispositivo() {
         session_start();
         if (!isset($_SESSION["usuario_id"])) {
-            header("Location: login.php");
+            header("Location: view/login.php");
             exit;
         }
 
@@ -62,14 +62,16 @@ class DispositivoController {
         }
     }
 
-    public function listar() {
-        session_start();
-        if (!isset($_SESSION["usuario_id"])) {
-            header("Location: login.php");
-            exit;
-        }
-    
-        $dispositivos = $this->dispositivo->listarDispositivos($_SESSION["usuario_id"]);
-        require 'C:\Turma2\xampp\htdocs\EnerVsion\view\listar_dispositivos.php';
+    public function listaDispositivos() {
+        return $this->dispositivo->listaDispositivos(); 
     }
+    
+    public function exibirListaDispositivos() {
+        $dispositivos = $this->listaDispositivos(); 
+        if (!$dispositivos) {  
+            $dispositivos = [];
+        }
+        include 'C:\Turma2\xampp\htdocs\EnerVsion\view\listar_dispositivos.php';
+
+}
 }

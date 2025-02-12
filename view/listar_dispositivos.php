@@ -3,26 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Lista de Dispositivos</title>
 </head>
 <body>
 
-<table border="1">
-    <tr>
-        <th>Nome</th>
-        <th>Potência (W)</th>
-        <th>Tempo de Uso (h/dia)</th>
-        <th>Consumo Estimado (kWh)</th>
-    </tr>
-    <?php foreach ($stmt as $dispositivo): ?>
-        <tr>
-            <td><?= htmlspecialchars($dispositivo["nome"]) ?></td>
-            <td><?= htmlspecialchars($dispositivo["potencia"]) ?></td>
-            <td><?= htmlspecialchars($dispositivo["tempo_uso"]) ?></td>
-            <td><?= htmlspecialchars($dispositivo["consumo_estimado"]) ?></td>
-        </tr>
-    <?php endforeach; ?>
-</table>
-    
+<h1>Lista de Dispositivos</h1>
+
+<?php
+if (!empty($dispositivos)) {
+    foreach ($dispositivos as $dispositivo) {
+        echo "Nome: " . htmlspecialchars($dispositivo["nome"]) . "<br>";
+        echo "Potência: " . htmlspecialchars($dispositivo["potencia"]) . " W<br>";
+        echo "Tempo de Uso: " . htmlspecialchars($dispositivo["tempo_uso"]) . " horas/dia<br>";
+        echo "Consumo Estimado: " . htmlspecialchars($dispositivo["consumo_estimado"]) . " kWh<br>";
+        echo "<br><hr>";
+    }
+} else {
+    echo "<p>Nenhum dispositivo cadastrado.</p>";
+}
+?>
+
+<button><a href="form_dispositivo.php">Cadastrar Novo Dispositivo</a></button>
+
 </body>
 </html>
