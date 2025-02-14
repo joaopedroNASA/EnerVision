@@ -11,7 +11,7 @@
 
 <body>
 
-    <nav class="nav-bar">
+    <nav class="nav-bar2">
         <div class="logo">
             <img src="img/Enervision.png" alt="">
         </div>

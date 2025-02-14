@@ -9,23 +9,43 @@ body {
     align-items: center;
     text-align: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    color: white;
+}
+.nav-bar2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 40px;
     color: white;
     gap: 490px;
 }
-.buttons button{
+.buttons {
     display: flex;
+    text-align: center;
+    align-items: center;
     gap: 20px;
     position: relative;
     right: 20px;
     bottom: 10px;
     background-color: #515D69;
     color: white;
-    font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
     border: none;
 }
+.buttons button{
+    background-color: #515D69;
+    color: white;
+    border: none;
+    font-size: 20px;
+}
 .nav-bar img {
+    height: 100px;
+    width: 150px;
+}
+.nav-bar2 img {
     height: 100px;
     width: 150px;
 }
