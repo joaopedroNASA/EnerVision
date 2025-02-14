@@ -1,6 +1,6 @@
 <?php
 
-require_once 'C:\Turma2\xampp\htdocs\EnerVsion\model\Dispositivo.php';
+require_once 'C:\Turma2\xampp\htdocs\EnerVision\model\Dispositivo.php';
 
 class DispositivoController {
     private $dispositivo;

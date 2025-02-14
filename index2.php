@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -13,20 +13,21 @@
 
     <nav class="nav-bar">
         <div class="logo">
+            <strong class="ener">ENER</strong>
             <img src="img/Enervision.png" alt="">
+            <strong class="vision">VISION</strong>
         </div>
-        <div class="logo-meio">
-            <strong>ENERVISION</strong>
+        <div class="name-usuario">
+            <h1>João Pedro Neves Amaral de Souza Camargo</h1>
         </div>
         <div>
-            <a href="view/cadastro.php"><button>Cadastrar</button></a>
-            <a href="view/login.php"><button>Login</button></a>
+
         </div>
     </nav>
     <div class="imagem">
         <img src="img/imagem3.png" alt="">
     </div>
-    <a href="view/login.php">
+    <a href="view/form_dispositivo.php">
         <div class="diario-mensal">
             <section class="consumo-diario">
                 <img src="img/imagem1.png" alt="">
@@ -34,7 +35,7 @@
                 <p>Dispositivos eletrônicos e consumo estimado</p>
             </section>
     </a>
-    <a href="view/login.php">
+    <a href="view\listar_dispositivos.php">
         <section class="consumo-mensal">
             <img src="img/imagem2.png" alt="">
             <h4>Consumo Mensal</h4>
