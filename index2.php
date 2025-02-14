@@ -35,7 +35,7 @@
                 <p>Dispositivos eletrônicos e consumo estimado</p>
             </section>
     </a>
-    <a href="view\listar_dispositivos.php">
+    <a href="indexgrafico.php">
         <section class="consumo-mensal">
             <img src="img/imagem2.png" alt="">
             <h4>Consumo Mensal</h4>
