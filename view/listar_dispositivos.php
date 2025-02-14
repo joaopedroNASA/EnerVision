@@ -13,7 +13,7 @@
 require_once 'C:\Turma2\xampp\htdocs\EnerVsion\config.php';
 require_once 'C:\Turma2\xampp\htdocs\EnerVsion\controller\DispositivoController.php';
 $controller = new DispositivoController($pdo);
-$dispositivos = $controller->listarDispositivos();
+$dispositivos = $controller->listaDispositivos();
 
 if (!empty($dispositivos)) {
     foreach ($dispositivos as $dispositivo) {

@@ -55,6 +55,17 @@ class DispositivoController
     return $this->dispositivo->adicionarDispositivo($nome, $potencia, $tempo_uso, $usuario_id);
 }
 
+public function listaDispositivos()
+    {
+        $dispositivos = $this->dispositivo->listaDispositivos();
+
+        if (!$dispositivos) {
+            $dispositivos = [];
+        }
+        return $dispositivos;
+    }
+
+
 public function registrarConsumoDiario()
 {
     if (session_status() === PHP_SESSION_NONE) {
