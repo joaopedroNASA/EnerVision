@@ -253,7 +253,7 @@
             </div>
 
             <div id="footer_copyright">
-                &#169 2023 all rights reserved
+                &#169 2025 all rights reserved
             </div>
         </div>
     </footer>

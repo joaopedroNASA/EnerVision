@@ -20,8 +20,7 @@
             <h1>João Pedro Neves Amaral de Souza Camargo</h1>
         </div>
         <div>
-            <input type="password">
-            <input type="password">
+
         </div>
     </nav>
     <main class="container">
@@ -34,23 +33,42 @@
                 </select>
                 <button type="button" name="potencia" required>Adicionar</button><br>
                 <p>Caso não tenha acima, adicione.</p>
-                <option type="number" name="tempo_uso" step="0.1" required >Eletrodoméstico</option><br>
-                <option value=""></option>
-                <input type="number" name="tempo_uso" step="0.1" required placeholder="Consumo"><br>
-                <button type="number" name="tempo_uso" step="0.1" required></button>Adicionar<br>
+                <select name="" id="">
+                    <option type="number" name="tempo_uso" step="0.1" required>Eletrodoméstico</option><br>
+                    <option value="">
+                    </option>
+                </select>
+                <input type="number" name="tempo_uso" required placeholder="Consumo"><br>
+                <button type="number" name="tempo_uso" required>Adicionar</button>
+                <p>Produtos adicionados:</p>
+                
             </form>
         </section>
         <section class="Consumo-diario2">
             <h1>Consumo diário real</h1>
             <form method="POST">
-                <input type="text" name="nome" required><br>
-                <input type="number" name="potencia" required><br>
-                <input type="number" name="tempo_uso" step="0.1" required><br>
-                <input type="number" name="tempo_uso" step="0.1" required><br>
-                <input type="number" name="tempo_uso" step="0.1" required><br>
+                    <input type="number" name="nome" required placeholder="Consumo em Kw do mês "><br>
+                    <select name="" id="">
+                    <option value="" disabled selected hidden>Selecione o mês</option> Option para "placeholder"
+                    <option value="">Janeiro</option>
+                    <option value="">Fevereiro</option>
+                    <option value="">Março</option>
+                    <option value="">Abril</option>
+                    <option value="">Maio</option>
+                    <option value="">Junho</option>
+                    <option value="">Julho</option>
+                    <option value="">Agosto</option>
+                    <option value="">Setembro</option>
+                    <option value="">Outubro</option>
+                    <option value="">Novembro</option>
+                    <option value="">Dezembro</option>
+                    </select>
+
             </form>
         </section>
     </main>
+
+
 
     <?php
     require_once 'C:\Turma2\xampp\htdocs\EnerVision\config.php';
@@ -67,7 +85,7 @@
 
     <br><br>
 
-    <a href="../index.php">VOLTAR</a>
+    <a href="../index2.php">VOLTAR</a>
 </body>
 
 </html>
