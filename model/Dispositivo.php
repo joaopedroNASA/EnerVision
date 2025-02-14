@@ -40,6 +40,29 @@ class Dispositivo {
         $stmt = $this->pdo->query($sql);
         return $stmt->fetchAll(PDO::FETCH_ASSOC); 
     }
+
+    public function calcularConsumoDiario($usuario_id) {
+        $sql = "SELECT SUM(consumo_estimado) as consumo_total FROM dispositivos WHERE usuario_id = ?";
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute([$usuario_id]);
+        $resultado = $stmt->fetch(PDO::FETCH_ASSOC);
+        
+        return $resultado['consumo_total'] ?? 0;
+    }
+    
+    public function registrarConsumo($usuario_id, $data, $consumo_total) {
+        $sql = "INSERT INTO consumo_diario (consumo_id, data_diario, consumo_diario) VALUES (?, ?, ?)";
+        $stmt = $this->pdo->prepare($sql);
+        return $stmt->execute([$usuario_id, $data, $consumo_total]);
+    }
+    
+    public function listarConsumoDiario($usuario_id) {
+        $sql = "SELECT * FROM consumo_diario WHERE consumo_id = ? ORDER BY data_diario DESC";
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute([$usuario_id]);
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+    
 }
 
 ?>
