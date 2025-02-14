@@ -18,7 +18,7 @@
         <div class="logo-meio">
             <strong>ENERVISION</strong>
         </div>
-        <div>
+        <div class="buttons">
             <a href="view/cadastro.php"><button>Cadastrar</button></a>
             <a href="view/login.php"><button>Login</button></a>
         </div>
@@ -252,7 +252,7 @@
             </div>
 
             <div id="footer_copyright">
-                &#169 2023 all rights reserved
+                &#169 2025 all rights reserved
             </div>
         </div>
     </footer>
