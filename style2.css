@@ -1,5 +1,6 @@
 body {
     padding: 0;
+    margin: 0;
     background-color: #515D69;
 }
 
@@ -840,4 +841,47 @@ footer {
         font-size: 0.75rem;
         padding: 1rem;
     }
+}
+
+@media screen and (max-width: 1020px) {
+
+    /*IMAGEM DO CARROSSEL*/
+    .imagem img {
+        display: none;
+    }
+
+    /*BOTÃO*/
+    .diario-mensal {
+        flex-direction: column;
+        gap: 100px;
+        padding: 110px;
+    }
+
+    .consumo-diario {
+        height: 210px;
+        width: 200px;
+    }
+
+    .consumo-mensal {
+        height: 210px;
+        width: 200px;
+    }
+
+    .consumo-diario img {
+        height: 90px;
+        width: 90px;
+    }
+
+    .consumo-mensal img {
+        height: 85px;
+        width: 90px;
+    }
+
+    .nav-bar2 {
+        gap: 100px;
+    }
+    .logo-meio  {
+        display: none;
+    }
+
 }
