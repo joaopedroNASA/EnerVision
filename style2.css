@@ -851,7 +851,7 @@ footer {
     .diario-mensal {
         flex-direction: column;
         gap: 100px;
-        padding: 110px;
+        padding: 200px;
     }
 
     .consumo-diario {
