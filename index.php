@@ -27,7 +27,7 @@ session_start();
                     echo "ENERVISION";
                 } else {
                     echo $_SESSION['nome_usuario'];
-                }
+                }   
             ?></strong>
         </div>
         <div class="buttons">
