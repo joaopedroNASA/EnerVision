@@ -1,9 +1,3 @@
-<?php
-session_start();
-
-
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -22,13 +16,11 @@ session_start();
             <img src="img/Enervision.png" alt="">
         </div>
         <div class="logo-meio">
-            <strong><?php
-                    if (empty($_SESSION['nome_usuario'])) {
-                        echo "ENERVISION";
-                    } else {
-                        echo $_SESSION['nome_usuario'];
-                    }
-                    ?></strong>
+            <strong>ENERVISION</strong>
+        </div>
+        <div class="buttons">
+            <a href="view/cadastro.php"><button>Cadastrar</button></a>
+            <a href="view/login.php"><button>Login</button></a>
         </div>
     </nav>
     <div class="imagem">
