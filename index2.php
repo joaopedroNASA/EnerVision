@@ -54,7 +54,6 @@
         <div id="footer_content">
             <div id="footer_contacts">
                 <img src="img/Enervision.png" alt="" width="300px">
-                <p>It's all about your dreams.</p>
                 <div id="footer_social_media">
                     <a href="https://www.instagram.com/" class="footer-link" id="instagram">
                         <i class="fa-brands fa-instagram"></i>
@@ -70,46 +69,43 @@
 
             <ul class="footer-list">
                 <li>
-                    <h3>Blog</h3>
+                    <h3>Feito por:</h3>
                 </li>
                 <li>
-                    <a href="#" class="footer-link">Tech</a>
+                    <a href="" class="footer-link">João Pedro</a>
                 </li>
                 <li>
-                    <a href="#" class="footer-link">Adventures</a>
+                    <a href="" class="footer-link">Luis Felipe</a>
                 </li>
                 <li>
-                    <a href="#" class="footer-link">Music</a>
+                    <a href="" class="footer-link">Diego Brito</a>
+                </li>
+                <li>
+                    <a href="" class="footer-link">Paulo Cesar</a>
+                </li>
+                <li>
+                    <a href="" class="footer-link">Octávio Gomes</a>
+                </li>
+                <li>
+                    <a href="" class="footer-link">Sara Ajala</a>
                 </li>
             </ul>
 
             <ul class="footer-list">
                 <li>
-                    <h3>Products</h3>
+                    <h3>Dados:</h3>
                 </li>
                 <li>
-                    <a href="#" class="footer-link">App</a>
+                    <a href="" class="footer-link">CNPJ:
+                        12.345.678/0001-90
+                    </a>
                 </li>
                 <li>
-                    <a href="#" class="footer-link">Desktop</a>
-                </li>
-                <li>
-                    <a href="#" class="footer-link">Cloud</a>
+                    <a href="" class="footer-link">Endereço:
+                        Rua Fictícia, 123, Bairro Imaginário, Cidade Exemplo, Estado de Teste, 12345-678
+                    </a>
                 </li>
             </ul>
-
-            <div id="footer_subscribe">
-                <h3>Subscribe</h3>
-                <p>
-                    Enter your e-mail to get notified about our news solutions.
-                </p>
-                <div id="input_group">
-                    <input type="email" id="email">
-                    <button>
-                        <i class="fa-regular fa-envelope"></i>
-                    </button>
-                </div>
-            </div>
 
             <div id="footer_copyright">
                 &#169 2025 all rights reserved
