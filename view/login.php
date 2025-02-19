@@ -26,6 +26,7 @@
                 <input type="email" name="email_usuario" placeholder="Email" required>
                 <input type="password" name="senha_usuario" placeholder="Password" required>
                 <button class="button">Login</button>
+                <a href="cadastro.php"><button class="button">Criar</button></a>
                 <?php
                 require_once 'C:\Turma2\xampp\htdocs\EnerVision\config.php';
                 require_once 'C:\Turma2\xampp\htdocs\EnerVision\controller\DispositivoController.php';
@@ -39,7 +40,6 @@
                 }
                 ?>
             </form>
-            <a href="cadastro.php"><button class="button">Criar</button></a>
         </div>
     </section>
 

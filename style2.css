@@ -1,5 +1,6 @@
 body {
     padding: 0;
+    margin: 0;
     background-color: #515D69;
 }
 
@@ -12,6 +13,7 @@ body {
     font-size: 20px;
     color: white;
 }
+
 .nav-bar2 {
     display: flex;
     justify-content: center;
@@ -22,6 +24,7 @@ body {
     color: white;
     gap: 490px;
 }
+
 .buttons {
     display: flex;
     text-align: center;
@@ -35,16 +38,19 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     border: none;
 }
-.buttons button{
+
+.buttons button {
     background-color: #515D69;
     color: white;
     border: none;
     font-size: 20px;
 }
+
 .nav-bar img {
     height: 100px;
     width: 150px;
 }
+
 .nav-bar2 img {
     height: 100px;
     width: 150px;
@@ -54,7 +60,8 @@ body {
     display: flex;
     align-items: center;
 }
-.logo-meio{
+
+.logo-meio {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -62,6 +69,7 @@ body {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 
 }
+
 .ener {
     position: relative;
     left: 40px;
@@ -185,7 +193,7 @@ select {
     flex-direction: column;
     gap: 4px;
     color: #828282;
-    
+
 }
 
 .container {
@@ -756,4 +764,47 @@ footer {
         font-size: 0.75rem;
         padding: 1rem;
     }
+}
+
+@media screen and (max-width: 1020px) {
+
+    /*IMAGEM DO CARROSSEL*/
+    .imagem img {
+        display: none;
+    }
+
+    /*BOTÃO*/
+    .diario-mensal {
+        flex-direction: column;
+        gap: 100px;
+        padding: 110px;
+    }
+
+    .consumo-diario {
+        height: 210px;
+        width: 200px;
+    }
+
+    .consumo-mensal {
+        height: 210px;
+        width: 200px;
+    }
+
+    .consumo-diario img {
+        height: 90px;
+        width: 90px;
+    }
+
+    .consumo-mensal img {
+        height: 85px;
+        width: 90px;
+    }
+
+    .nav-bar2 {
+        gap: 100px;
+    }
+    .logo-meio  {
+        display: none;
+    }
+
 }
