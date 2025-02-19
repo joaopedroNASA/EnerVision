@@ -1,3 +1,10 @@
+<?php
+session_start();
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,7 +25,13 @@
             <strong class="vision">VISION</strong>
         </div>
         <div class="name-usuario">
-            <h1>João Pedro Neves Amaral de Souza Camargo</h1>
+            <h1><?php 
+                if (empty($_SESSION['nome_usuario'])) {
+                    echo "ENERVISION";
+                } else {
+                    echo $_SESSION['nome_usuario'];
+                }   
+            ?></h1>
         </div>
         <div>
 
