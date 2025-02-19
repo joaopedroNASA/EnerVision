@@ -94,15 +94,14 @@ if (isset($_GET['kw']) && isset($_GET['dias'])) {
     if (is_numeric($kwTotal) && is_numeric($diasNoMes) && $kwTotal > 0 && $diasNoMes > 0) {
         // Calcula o consumo diário
         $kwPorDia = calcularKwPorDia($kwTotal, $diasNoMes);
-        
+
         // Definir a mensagem de acordo com o consumo diário
-        if ($kwPorDia < 20) {
-            $mensagem = "Parabéns! Seu consumo diário está abaixo de 20 kW. Isso é excelente! Continue assim.";
+// Definir a mensagem de acordo com o consumo diário
+        if ($kwPorDia < $consumo_total) {
+            $mensagem = "A Média do Consumo Diário Calculado está abaixo do consumo estimado {$consumo_total} kW. Parabéns!";
         } else {
-            $mensagem = "Seu consumo diário real é de {$kwPorDia} kW, que está um pouco acima do esperado. Vamos tentar reduzir esse valor!";
+            $mensagem = "A Média do Consumo Diário Calculado está acima do consumo estimado {$consumo_total} kW. Que pena!";
         }
-    } else {
-        $mensagem = "Por favor, insira valores válidos para o consumo de kW e o número de dias.";
     }
 }
 ?>
@@ -131,7 +130,7 @@ if (isset($_GET['kw']) && isset($_GET['dias'])) {
     </nav>
     <main class="container">
         <section class="Consumo-diario2">
-            <h1>Consumo diário</h1>
+            <h1>Consumo Estimado</h1>
             <form method="POST">
                 <select name="dispositivo_id" id="dispositivo_id">
                     <option value="" disabled selected hidden>Selecione um dispositivo</option>
@@ -152,8 +151,6 @@ if (isset($_GET['kw']) && isset($_GET['dias'])) {
                 <input type="number" step="0.01" name="tempo_uso_manual" placeholder="Tempo de uso (em horas)"><br>
 
                 <button type="submit">Adicionar</button><br>
-                
-                <!-- Botão de Resetar -->
                 <button type="submit" name="resetar">Resetar</button><br>
             </form>
             <h1>Produtos Adicionados</h1>
@@ -190,23 +187,30 @@ if (isset($_GET['kw']) && isset($_GET['dias'])) {
         </section>
 
         <section class="Consumo-diario2">
-            <h1>Consumo Diário Calculado</h1>
-            <p><?php echo $mensagem; ?></p>
+            <h1>Média do Consumo Diário Calculado:</h1>
 
             <form method="GET" action="">
                 <label for="kw">Total de kW consumidos:</label>
-                <input type="number" name="kw" id="kw" required>
+                <input type="number" name="kw" id="kw" step="0.01" required>
                 <br><br>
+
                 <label for="dias">Número de dias no mês:</label>
                 <input type="number" name="dias" id="dias" required>
                 <br><br>
+
                 <input type="submit" value="Calcular">
             </form>
+
+            <?php if (!empty($mensagem)): ?>
+                <p><strong><?php echo $mensagem; ?></strong></p>
+            <?php endif; ?>
+
         </section>
+
     </main>
     <br>
     <br>
-    <a href="../index2.php">VOLTAR</a>
+    <a href="../index2.php" class="botao-inicio">Início</a>
 </body>
 
 </html>

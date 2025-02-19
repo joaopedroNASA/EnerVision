@@ -163,7 +163,6 @@ a {
 /* form_dispositivo */
 
 .Consumo-diario2 {
-    display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -173,9 +172,7 @@ a {
     border: 2px solid black;
     box-shadow: 10px 10px 40px;
     padding: 10px;
-    height: 500px;
-    width: 250px;
-    max-width: 350px;
+    width: 570px;
 }
 
 .Consumo-diario2 input,
@@ -880,8 +877,30 @@ footer {
     .nav-bar2 {
         gap: 100px;
     }
-    .logo-meio  {
+
+    .logo-meio {
         display: none;
     }
+
+    .botao-inicio {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        color: white;
+        background-color: #007bff;
+        border: none;
+        border-radius: 25px;
+        text-decoration: none;
+        transition: 0.3s;
+        box-shadow: 0 4px 6px rgba(0, 123, 255, 0.3);
+    }
+
+    .botao-inicio:hover {
+        background-color: #0056b3;
+        transform: scale(1.05);
+    }
+
+
 
 }
