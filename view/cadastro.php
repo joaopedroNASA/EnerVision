@@ -29,6 +29,7 @@
                     <input type="email" name="email_usuario"  placeholder="Email">
                     <input type="password" name="senha_usuario" placeholder="Password">
                     <input class="button" type="submit">
+                    <a href="../index.php"><button class="button">Voltar</button></a>
                 </form>
             </div>
         </section>
@@ -49,7 +50,7 @@
 
     <br><br>
 
-<a href="../index.php">VOLTAR</a>
+
 </body>
 
 </html>
