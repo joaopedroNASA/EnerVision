@@ -847,14 +847,14 @@ footer {
 
     /*IMAGEM DO CARROSSEL*/
     .imagem img {
-        display: none;
+        height: 200px;
     }
 
     /*BOTÃO*/
     .diario-mensal {
         flex-direction: column;
         gap: 100px;
-        padding: 200px;
+        margin: 100px;
     }
 
     .consumo-diario {

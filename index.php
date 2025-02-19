@@ -49,6 +49,7 @@
         </section>
     </a>
     </div>
+    </div>
     <footer>
         <div id="footer_content">
             <div id="footer_contacts">
