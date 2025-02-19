@@ -27,10 +27,10 @@
     <div class="imagem">
         <div class="carrossel">
             <div class="carrossel-container">
-                <img src="img/imagem3.png" alt="Imagem 1">
-                <img src="imagem2.jpg" alt="Imagem 2">
-                <img src="imagem3.jpg" alt="Imagem 3">
-                <img src="imagem4.jpg" alt="Imagem 4">
+                <img src="img/Capa de Email Promoção da Semana Moderno Preto e Amarelo (1).png" alt="Imagem 1">
+                <img src="img/2.png" alt="Imagem 2">
+                <img src="img/3.png" alt="Imagem 3">
+                <img src="img/4.png" alt="Imagem 4">
             </div>
         </div>
     </div>

@@ -510,7 +510,7 @@ a {
 /* Estilo das imagens */
 .carrossel-container img {
     width: 100%;
-    height: 100%;
+    height: 335px;
     object-fit: cover;
     /* Garante que a imagem cubra toda a área sem distorcer */
     flex-shrink: 0;
