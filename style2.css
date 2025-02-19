@@ -842,16 +842,18 @@ footer {
 
 @media screen and (max-width: 1020px) {
 
+    /*index2*/  
+
     /*IMAGEM DO CARROSSEL*/
     .imagem img {
-        display: none;
+        
     }
 
     /*BOTÃO*/
     .diario-mensal {
         flex-direction: column;
         gap: 100px;
-        padding: 200px;
+        margin: 150px;
     }
 
     .consumo-diario {
@@ -874,8 +876,8 @@ footer {
         width: 90px;
     }
 
-    .nav-bar2 {
-        gap: 100px;
+    .nav-bar {
+        gap: 10px;
     }
 
     .logo-meio {
@@ -901,6 +903,8 @@ footer {
         transform: scale(1.05);
     }
 
+    /* index */
 
-
+    .nav-bar2{
+    }
 }
