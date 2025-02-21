@@ -13,6 +13,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style2.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script src="https://kit.fontawesome.com/904bf533d7.js" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
 
@@ -32,6 +33,15 @@ session_start();
                     echo $_SESSION['nome_usuario'];
                 }   
             ?></h1>
+        </div>
+        <div class="buttons">
+            <a href="view/cadastro.php"><button>Cadastrar</button></a>
+           <?php if (isset($_SESSION['id_usuario'])) {
+    echo "<a href='view/logout.php'><button>Logout</button></a>";
+} else {
+    echo "<a href='view/login.php'><button>Login</button></a>";
+} ?>
+            <button class="dark-btn"><i class="fa-solid fa-moon"></i></button>
         </div>
         <div>
 
