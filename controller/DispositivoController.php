@@ -27,7 +27,7 @@ class DispositivoController
 
         if ($usuario) {
             $_SESSION["usuario_id"] = $usuario["id"];
-            header("Location: index.php");
+            header("Location: ../index2.php");
         } else {
             echo "Login inválido!";
         }
