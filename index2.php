@@ -27,11 +27,11 @@ session_start();
         </div>
         <div class="name-usuario">
             <h1><?php 
-                if (empty($_SESSION['nome_usuario'])) {
-                    //echo "ENERVISION";
-                } else {
-                    echo $_SESSION['nome_usuario'];
-                }   
+          if (empty($_SESSION['nome_usuario'])) {
+            echo "ENERVISION";
+        } else {
+            echo $_SESSION['nome_usuario'];
+        }   
             ?></h1>
         </div>
         <div class="buttons">

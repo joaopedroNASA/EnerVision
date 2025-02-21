@@ -29,7 +29,11 @@ session_start();
                 }   
             ?></h1>
         </div>
-           
+           <style>
+            @media screen and (max-width: 1024px) {
+                
+            }
+           </style>
         </div>
         <div class="buttons">
             <button class="dark-btn"><i class="fa-solid fa-moon"></i></button>

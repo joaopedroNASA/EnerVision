@@ -1,8 +1,4 @@
-<?php
-session_start();
 
-
-?>
 <?php
 require_once 'C:\Turma2\xampp\htdocs\EnerVision\config.php';
 require_once 'C:\Turma2\xampp\htdocs\EnerVision\controller\DispositivoController.php';

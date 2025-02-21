@@ -905,6 +905,9 @@ footer {
 
     .nav-bar {
         gap: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .logo {

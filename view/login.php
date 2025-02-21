@@ -36,6 +36,7 @@
 
                     $dispositivoController->login($_POST["email_usuario"], $_POST["senha_usuario"]);
 
+                    header("location: ../view/cadastro.php");
                     header("location: ../index2.php");
                 }
                 ?>
