@@ -23,24 +23,29 @@
         <div class="login">
             <h1>LOGIN</h1>
             <form class="form" action="" method="POST">
-                <input type="email" name="email_usuario" placeholder="Email" >
-                <input type="password" name="senha_usuario" placeholder="Password" >
-                <button class="button">Login</button>
-                <a href="cadastro.php"><button class="button">Criar</button></a>
-                <?php
-                require_once 'C:\Turma2\xampp\htdocs\EnerVision\config.php';
-                require_once 'C:\Turma2\xampp\htdocs\EnerVision\controller\DispositivoController.php';
-
-                if (isset($_POST["email_usuario"]) && isset($_POST["senha_usuario"])) {
-                    $dispositivoController = new DispositivoController($pdo);
-
-                    $dispositivoController->login($_POST["email_usuario"], $_POST["senha_usuario"]);
-
-                    header("location: ../view/cadastro.php");
-                    header("location: ../index2.php");
-                }
-                ?>
+                <input type="email" name="email_usuario" placeholder="Email" required>
+                <input type="password" name="senha_usuario" placeholder="Password" required>
+                <button class="button" type="submit">Login</button>
             </form>
+
+            <!-- Link para a página de cadastro fora do formulário -->
+            <a href="cadastro.php"><button class="button">Criar</button></a>
+
+            <?php
+            require_once 'C:\Turma2\xampp\htdocs\EnerVision\config.php';
+            require_once 'C:\Turma2\xampp\htdocs\EnerVision\controller\DispositivoController.php';
+
+            if (isset($_POST["email_usuario"]) && isset($_POST["senha_usuario"])) {
+                $dispositivoController = new DispositivoController($pdo);
+
+                if ($dispositivoController->login($_POST["email_usuario"], $_POST["senha_usuario"])) {
+                    header("Location: ../index2.php");
+                    exit;
+                } else {
+                    echo "Usuário ou senha inválidos.";
+                }
+            }
+            ?>
         </div>
     </section>
 
