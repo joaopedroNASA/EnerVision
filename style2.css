@@ -840,9 +840,9 @@ footer {
     }
 }
 
-@media screen and (max-width: 1020px) {
+@media screen and (max-width: 1024px) {
 
-    /*index2*/  
+    /*index*/
 
     /*IMAGEM DO CARROSSEL*/
     .imagem img {
@@ -876,16 +876,13 @@ footer {
         width: 90px;
     }
 
-    .nav-bar {
-        gap: 10px;
-    }
 
     .logo-meio {
         display: none;
     }
 
     .botao-inicio {
-        display: inline-block;
+        display: flex;
         padding: 10px 20px;
         font-size: 16px;
         font-weight: bold;
@@ -903,8 +900,13 @@ footer {
         transform: scale(1.05);
     }
 
-    /* index */
+    /* index2 */
 
-    .nav-bar2{
+    .nav-bar {
+        gap: 0px;
+    }
+
+    .logo {
+        gap: 0;
     }
 }

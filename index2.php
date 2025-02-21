@@ -27,7 +27,7 @@ session_start();
         <div class="name-usuario">
             <h1><?php 
                 if (empty($_SESSION['nome_usuario'])) {
-                    echo "ENERVISION";
+                    //echo "ENERVISION";
                 } else {
                     echo $_SESSION['nome_usuario'];
                 }   

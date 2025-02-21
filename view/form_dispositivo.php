@@ -96,7 +96,7 @@ if (isset($_GET['kw']) && isset($_GET['dias'])) {
         $kwPorDia = calcularKwPorDia($kwTotal, $diasNoMes);
 
         // Definir a mensagem de acordo com o consumo diário
-// Definir a mensagem de acordo com o consumo diário
+        // Definir a mensagem de acordo com o consumo diário
         if ($kwPorDia < $consumo_total) {
             $mensagem = "A Média do Consumo Diário Calculado está abaixo do consumo estimado {$consumo_total} kW. Parabéns!";
         } else {
@@ -118,6 +118,7 @@ if (isset($_GET['kw']) && isset($_GET['dias'])) {
 </head>
 
 <body>
+
     <nav class="nav-bar">
         <div class="logo">
             <strong class="ener">ENER</strong>
@@ -125,7 +126,6 @@ if (isset($_GET['kw']) && isset($_GET['dias'])) {
             <strong class="vision">VISION</strong>
         </div>
         <div class="name-usuario">
-            <h1>João Pedro Neves Amaral de Souza Camargo</h1>
         </div>
     </nav>
     <main class="container">
@@ -140,7 +140,34 @@ if (isset($_GET['kw']) && isset($_GET['dias'])) {
                         </option>
                     <?php endforeach; ?>
                 </select><br>
+                <style>
+                    @media screen and (max-width: 1024px) {
+                        .logo {
+                            align-items: center;
+                            justify-content: center;
+                            margin: 50px;
+                        }
 
+                        .container {
+                            flex-direction: column;
+                            align-items: center;
+                            gap: 90px;
+                            padding: 0;
+                            margin: 0;
+                        }
+
+                        .Consumo-diario2 {
+                            width: 350px;
+
+                        }
+
+                        .botao-inicio {
+                            margin: 20px;
+                            justify-content: center;
+                            align-items: center;
+                        }
+                    }
+                </style>
                 <input type="number" step="0.01" name="tempo_uso_selecionado" placeholder="Tempo de uso (em horas)"><br>
                 <button type="submit">Adicionar</button><br>
 
