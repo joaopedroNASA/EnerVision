@@ -105,11 +105,6 @@ if (isset($_GET['kw']) && isset($_GET['dias'])) {
     }
 }
 ?>
-<?php
-session_start();
-
-
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -139,11 +134,11 @@ session_start();
             ?></h1>
         </div>
         <div class="buttons">
-            <a href="view/cadastro.php"><button>Cadastrar</button></a>
+           
            <?php if (isset($_SESSION['id_usuario'])) {
-    echo "<a href='view/logout.php'><button>Logout</button></a>";
-} else {
     echo "<a href='view/login.php'><button>Login</button></a>";
+} else {
+    echo "<a href='logout.php'><button>Logout</button></a>";
 } ?>
             <button class="dark-btn"><i class="fa-solid fa-moon"></i></button>
         </div>

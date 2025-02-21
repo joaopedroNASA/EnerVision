@@ -23,8 +23,8 @@
         <div class="login">
             <h1>LOGIN</h1>
             <form class="form" action="" method="POST">
-                <input type="email" name="email_usuario" placeholder="Email" required>
-                <input type="password" name="senha_usuario" placeholder="Password" required>
+                <input type="email" name="email_usuario" placeholder="Email" >
+                <input type="password" name="senha_usuario" placeholder="Password" >
                 <button class="button">Login</button>
                 <a href="cadastro.php"><button class="button">Criar</button></a>
                 <?php
