@@ -1,3 +1,8 @@
+<?php
+session_start();
+
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -15,8 +20,16 @@
         <div class="logo">
             <img src="img/Enervision.png" alt="">
         </div>
-        <div class="logo-meio">
-            <strong>ENERVISION</strong>
+        <div class="name-usuario">
+            <h1><?php 
+                if (empty($_SESSION['nome_usuario'])) {
+                    echo "ENERVISION";
+                } else {
+                    echo $_SESSION['nome_usuario'];
+                }   
+            ?></h1>
+        </div>
+           
         </div>
         <div class="buttons">
             <button class="dark-btn"><i class="fa-solid fa-moon"></i></button>
