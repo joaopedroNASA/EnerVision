@@ -1,0 +1,85 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #515D69;
+}
+
+.nav-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 70px;
+    color: white;
+}
+
+.ener{
+    position: relative;
+    left: 58px;
+}
+.vision{
+    position: relative;
+    right: 50px;
+}
+
+.nav-logo img {
+    height: 150px;
+    width: 200px;
+}
+
+.page-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    height: 400px;
+    width: 300px;
+    border: 3px solid black;
+    border-radius: 10px;
+    box-shadow: 10px 10px 40px;
+    background-color: white;
+
+}
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    bottom: 45px;
+}
+.button {
+    color: black;
+    background-color: #1B93CA;
+    width: 180px;
+    height: 25px;
+    border: none;
+    border-radius: 10PX;
+}
+h1{
+    font-size: 60px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    position: relative;
+    bottom: 50px;
+}
+input{
+    width: 170px;
+    height: 25px;
+    background-color: #D9D9D9;
+    border-radius: 10px;
+    border: none;
+}
+@media screen  and (max-width: 1020px){
+
+}
+

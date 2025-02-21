@@ -1,6 +1,6 @@
 <?php
 
-require_once 'C:\Turma2\xampp\htdocs\EnerVsion\model\Dispositivo.php';
+require_once 'C:\Turma2\xampp\htdocs\EnerVision\model\Dispositivo.php';
 
 class DispositivoController
 {
@@ -27,7 +27,7 @@ class DispositivoController
 
         if ($usuario) {
             $_SESSION["usuario_id"] = $usuario["id"];
-            header("Location: index.php");
+            header("Location: ../index2.php");
         } else {
             echo "Login inválido!";
         }

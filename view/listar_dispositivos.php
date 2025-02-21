@@ -10,8 +10,8 @@
 <h1>Lista de Dispositivos</h1>
 
 <?php
-require_once 'C:\Turma2\xampp\htdocs\EnerVsion\config.php';
-require_once 'C:\Turma2\xampp\htdocs\EnerVsion\controller\DispositivoController.php';
+require_once 'C:\Turma2\xampp\htdocs\EnerVision\config.php';
+require_once 'C:\Turma2\xampp\htdocs\EnerVision\controller\DispositivoController.php';
 $controller = new DispositivoController($pdo);
 $dispositivos = $controller->listaDispositivos();
 

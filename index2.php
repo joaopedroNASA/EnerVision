@@ -3,48 +3,48 @@ session_start();
 
 
 ?>
+
+
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style2.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script src="https://kit.fontawesome.com/904bf533d7.js" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
 
 <body>
 
-    <nav class="nav-bar2">
+    <nav class="nav-bar">
         <div class="logo">
+            <strong class="ener">ENER</strong>
             <img src="img/Enervision.png" alt="">
+            <strong class="vision">VISION</strong>
         </div>
         <div class="name-usuario">
             <h1><?php 
-                if (empty($_SESSION['nome_usuario'])) {
-                    echo "ENERVISION";
-                } else {
-                    echo $_SESSION['nome_usuario'];
-                }   
+          if (empty($_SESSION['nome_usuario'])) {
+            echo "ENERVISION";
+        } else {
+            echo $_SESSION['nome_usuario'];
+        }   
             ?></h1>
         </div>
-           <style>
-            @media screen and (max-width: 1024px) {
-                
-            }
-           </style>
-        </div>
         <div class="buttons">
-            <button class="dark-btn"><i class="fa-solid fa-moon"></i></button>
-            <?php
-
-if (isset($_SESSION['id_usuario'])) {
-    echo "<a href='view/logout.php'><button>Logout</button></a>";
-} else {
-    echo "<a href='view/login.php'><button>Login</button></a>";
-} ?>
             
+           <?php if (isset($_SESSION['id_usuario'])) {
+    echo "<a href='view/login.php'><button>Login</button></a>";
+} else {
+    echo "<a href='view/logout.php'><button>Logout</button></a>";
+} ?>
+            <button class="dark-btn"><i class="fa-solid fa-moon"></i></button>
+        </div>
+        <div>
+
         </div>
     </nav>
     <div class="imagem">
@@ -57,7 +57,7 @@ if (isset($_SESSION['id_usuario'])) {
             </div>
         </div>
     </div>
-    <a href="view/login.php">
+    <a href="view/form_dispositivo.php">
         <div class="diario-mensal">
             <section class="consumo-diario">
                 <img src="img/imagem1.png" alt="">
@@ -65,14 +65,13 @@ if (isset($_SESSION['id_usuario'])) {
                 <p>Dispositivos eletrônicos e consumo estimado</p>
             </section>
     </a>
-    <a href="view/login.php">
+    <a href="indexgrafico.php">
         <section class="consumo-mensal">
             <img src="img/imagem2.png" alt="">
             <h4>Consumo Mensal</h4>
             <p>Criação de gráficos detalhados do consumo mensal de energia.</p>
         </section>
     </a>
-    </div>
     </div>
     <footer>
         <div id="footer_content">

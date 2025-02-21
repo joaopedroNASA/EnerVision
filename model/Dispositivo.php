@@ -17,16 +17,17 @@ class Dispositivo {
         $stmt = $this->pdo->prepare("SELECT * FROM usuarios WHERE email_usuario = ?");
         $stmt->execute([$email_usuario]);
         $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
-        
-        session_start();
-            $_SESSION["usuario_id"] = $usuario["id"];
-            $_SESSION["nome_usuario"] = $usuario["nome_usuario"];
-
+    
         if ($usuario && password_verify($senha_usuario, $usuario["senha_usuario"])) {
+            session_start();
+            $_SESSION["usuario_id"] = $usuario["id_usuario"];
+            $_SESSION["nome_usuario"] = $usuario["nome_usuario"];
             return $usuario;
         }
+        
         return false;
     }
+    
 
     public function adicionarDispositivo($nome_dispositivo, $potencia, $tempo_uso, $usuario_id) {
         $consumo_estimado = ($potencia * $tempo_uso) / 1000;
