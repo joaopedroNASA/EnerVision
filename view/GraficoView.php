@@ -1,8 +1,3 @@
-<?php
-session_start();
-
-
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -12,16 +7,15 @@ session_start();
     <title>Gráfico de Consumo</title>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
-        google.charts.load("current", { packages: ['corechart'] });
-        google.charts.setOnLoadCallback(drawChart);
+         google.charts.load("current", { packages: ["corechart"] });
+    google.charts.setOnLoadCallback(drawChart);
 
-        function drawChart() {
+    function drawChart() {
+        <?php if (!empty($dados)) { ?>
             var data = google.visualization.arrayToDataTable([
                 ["Mês", "Consumo (kW)", { role: "style" }],
-                <?php if (!empty($dados)) {
-                    foreach ($dados as $linha) {
-                        echo "['" . $linha['mes'] . "', " . $linha['kilowatts'] . ", '#4CAF50'],";
-                    }
+                <?php foreach ($dados as $linha) {
+                    echo "['" . $linha['mes'] . "', " . $linha['kilowatts'] . ", '#4CAF50'],";
                 } ?>
             ]);
 
@@ -35,8 +29,12 @@ session_start();
 
             var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
             chart.draw(data, options);
-        }
-    </script>
+        <?php } else { ?>
+            document.getElementById("columnchart_values").innerHTML = 
+                "<p style='color: red; font-size: 18px; text-align: center;'>Nenhum dado disponível para exibir o gráfico.</p>";
+        <?php } ?>
+    }
+</script>
 </head>
 
 <body>

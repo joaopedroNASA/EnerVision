@@ -9,9 +9,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST['mes']) && isset($_POST['kilowatts'])) {
         $mes = $_POST['mes'];
         $kilowatts = $_POST['kilowatts'];
+        $usuario_id = $_SESSION['usuario_id'];
 
-        if (!empty($mes) && !empty($kilowatts)) {
-            $graficoModel->inserirDado($mes, $kilowatts);
+        if (!empty($mes) && !empty($kilowatts) && !empty($usuario_id)) {
+            $graficoModel->inserirDado($mes, $kilowatts, $usuario_id);
             header("Location: " . $_SERVER['PHP_SELF']);
             exit;
         }
@@ -23,6 +24,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
-$dados = $graficoModel->listarDados();
+$dados = $graficoModel->listarDados($_SESSION['usuario_id']);
 $graficoModel->fecharConexao();
 ?>
