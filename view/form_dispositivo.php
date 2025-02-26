@@ -122,7 +122,7 @@ if (isset($_GET['kw']) && isset($_GET['dias'])) {
     <nav class="nav-bar">
         <div class="logo">
             <strong class="ener">ENER</strong>
-            <img src="../img/Enervision.png" alt="Logo EnerVision">
+            <a href="../index2.php"><img src="../img/Enervision.png"></a>
             <strong class="vision">VISION</strong>
         </div>
         <div class="name-usuario">
@@ -233,13 +233,11 @@ if (isset($_GET['kw']) && isset($_GET['dias'])) {
             <h1>Média do Consumo Diário Calculado:</h1>
 
             <form method="GET" action="">
-                <label for="kw">Total de kW consumidos:</label>
-                <input type="number" name="kw" id="kw" step="0.01" required>
-                <br><br>
-
-                <label for="dias">Número de dias no mês:</label>
-                <input type="number" name="dias" id="dias" required>
-                <br><br>
+                <br>
+                <input type="number" name="kw" id="kw" step="0.01" required placeholder="Total de kW consumidos:">
+                <br>
+                <input type="number" name="dias" id="dias" required placeholder="Número de dias no mês:">
+                <br>
 
                 <input type="submit" value="Calcular">
             </form>
@@ -251,9 +249,6 @@ if (isset($_GET['kw']) && isset($_GET['dias'])) {
         </section>
 
     </main>
-    <br>
-    <br>
-    <a href="../index2.php" class="botao-inicio">Início</a>
 </body>
 
 </html>
