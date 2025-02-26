@@ -23,7 +23,7 @@
         </nav>
         <section class="page-login">
             <div class="login">
-                <h1>REGISTER</h1>
+                <h1>CRIAR</h1>
                 <form class="form" action=""  method="POST">
                     <input type="name" name="nome_usuario" placeholder="Nome">
                     <input type="email" name="email_usuario"  placeholder="Email">

@@ -18,9 +18,6 @@
         <div class="name-usuario2">
             <strong><p>ENERVISION</p></strong>
         </div>
-        <style>
-            @media screen and (max-width: 1024px) {}
-        </style>
         </div>
         <div class="buttons2">
             <?php
@@ -28,7 +25,7 @@
             if (isset($_SESSION['id_usuario'])) {
                 echo "<a href='view/logout.php'><button>Logout</button></a>";
             } else {
-                echo "<a href='view/login.php'><button>Login</button></a>";
+                echo "<a href='view/login.php'><button><strong>Login</strong></button></a>";
             } ?>
         </div>
     </nav>

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
 body {
     padding: 0;
     margin: 0;
@@ -105,10 +106,11 @@ body {
     position: relative;
     right: 35px;
 }
+
 .ener2 {
     position: relative;
     left: 40px;
-    bottom:4px;
+    bottom: 4px;
 }
 
 .vision2 {
@@ -136,6 +138,7 @@ body {
     position: relative;
     left: -30px;
 }
+
 .name-usuario3 {
     display: flex;
     justify-content: center;
@@ -254,6 +257,7 @@ option {
 .Consumo-diario2 form,
 select {
     display: flex;
+    font-family: "Rubik", serif;
     flex-direction: column;
     gap: 4px;
     color: #000000;
@@ -434,6 +438,7 @@ footer {
 #footer_copyright p {
     margin: 0;
 }
+
 /* Layout flexível para o corpo da página */
 body {
     font-family: "Rubik", serif;
@@ -914,10 +919,12 @@ footer {
         margin: 0;
         padding: 0;
     }
-.buttons2{
-    position: relative;
-    left: -10px;
-}
+
+    .buttons2 {
+        position: relative;
+        left: -10px;
+    }
+
     .name-usuario2 {
         font-size: 20px;
         margin: 10px;
@@ -928,7 +935,8 @@ footer {
         right: 20px;
         top: 10px;
     }
-    .logo2 img{
+
+    .logo2 img {
         height: 100px;
         width: 150px;
 
@@ -1026,6 +1034,10 @@ footer {
     cursor: pointer;
 }
 
+.button-sair {
+    font-family: "Rubik", serif;
+}
+
 .formulariograf {
     display: flex;
     margin: 15px;
@@ -1040,12 +1052,13 @@ footer {
     flex-direction: column;
     border-radius: 30px;
     margin-top: 10px;
-
+    box-shadow: 10px 10px 40px black;
 
 }
 
 .container-grafico {
     display: flex;
+    margin: 40px;
     justify-content: center;
     /* Centraliza horizontalmente */
     align-items: center;
@@ -1054,4 +1067,7 @@ footer {
     /* Organiza os elementos em coluna */
     height: 80vh;
     /* Faz o contêiner ocupar toda a altura da tela */
+}
+.select-dispositivo{
+    font-family: "Rubik", serif;
 }

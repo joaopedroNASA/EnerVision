@@ -134,18 +134,17 @@ if (isset($_GET['kw']) && isset($_GET['dias'])) {
                 }   
             ?></h1>
         </div>
-        <div class="buttons">
-           
-
-            <button class="dark-btn"><i class="fa-solid fa-moon"></i></button>
+        <div>
+            
         </div>
+
     </nav>
     <main class="container">
         <section class="Consumo-diario2">
             <h1>Consumo Estimado</h1>
             <form method="POST">
                 <select name="dispositivo_id" id="dispositivo_id">
-                    <option value="" disabled selected hidden>Selecione um dispositivo</option>
+                    <option class="select-dispositivo" value="" disabled selected hidden>Selecione um dispositivo</option>
                     <?php foreach ($dispositivos as $dispositivo): ?>
                         <option value="<?php echo htmlspecialchars($dispositivo['id']); ?>">
                             <?php echo htmlspecialchars($dispositivo['nome_dispositivo']); ?>
@@ -181,7 +180,7 @@ if (isset($_GET['kw']) && isset($_GET['dias'])) {
                     }
                 </style>
                 <input type="number" step="0.01" name="tempo_uso_selecionado" placeholder="Tempo de uso (em horas)"><br>
-                <button type="submit">Adicionar</button><br>
+                <button type="submit"><strong>Adicionar</strong></button><br>
 
                 <p>Caso não tenha o dispositivo acima, adicione manualmente.</p>
                 <input type="text" name="dispositivo_nome" placeholder="Nome do eletrodoméstico"><br>
@@ -189,8 +188,8 @@ if (isset($_GET['kw']) && isset($_GET['dias'])) {
 
                 <input type="number" step="0.01" name="tempo_uso_manual" placeholder="Tempo de uso (em horas)"><br>
 
-                <button type="submit">Adicionar</button><br>
-                <button type="submit" name="resetar">Resetar</button><br>
+                <button type="submit"><strong>Adicionar</strong></button><br>
+                <button type="submit" name="resetar"><strong>Resetar</strong></button><br>
             </form>
             <h1>Produtos Adicionados</h1>
             <table>
@@ -235,7 +234,7 @@ if (isset($_GET['kw']) && isset($_GET['dias'])) {
                 <input type="number" name="dias" id="dias" required placeholder="Número de dias no mês:">
                 <br>
 
-                <input type="submit" value="Calcular">
+                <button type="submit"><strong>Calcular</strong></button><br>
             </form>
 
             <?php if (!empty($mensagem)): ?>
