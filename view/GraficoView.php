@@ -4,34 +4,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style2.css">
     <title>Gráfico de Consumo</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style2.css">
+
+    <!-- Google Charts -->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
     <script type="text/javascript">
-
-        google.charts.load("current", { packages: ["corechart"] });
+        google.charts.load("current", {
+            packages: ["corechart"]
+        });
         google.charts.setOnLoadCallback(drawChart);
-
 
         function drawChart() {
             <?php if (!empty($dados)) { ?>
                 var data = google.visualization.arrayToDataTable([
-                    ["Mês", "Consumo (kW)", { role: "style" }],
+                    ["Mês", "Consumo (kW)", {
+                        role: "style"
+                    }],
                     <?php foreach ($dados as $linha) {
-                        echo "['" . $linha['mes'] . "', " . $linha['kilowatts'] . ", '#4CAF50'],";
+                        echo "['" . $linha['mes'] . "', " . $linha['kilowatts'] . ", '#1B93CA'],";
                     } ?>
                 ]);
 
                 var options = {
                     title: "Consumo Mensal de Energia (kW)",
-                    width: 850,
-                    height: 400,
-                    bar: { groupWidth: "95%" },
-                    legend: { position: "none" },
+                    bar: {
+                        groupWidth: "50%"
+                    },
+                    legend: {
+                        position: "none"
+                    },
+                    chartArea: {
+                        width: "80%",
+                        height: "70%"
+                    }, // Mantém responsivo
                 };
 
                 var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
                 chart.draw(data, options);
+
+                // Redesenhar gráfico ao redimensionar
+                window.addEventListener('resize', function() {
+                    chart.draw(data, options);
+                });
             <?php } else { ?>
                 document.getElementById("columnchart_values").innerHTML =
                     "<p style='color: red; font-size: 18px; text-align: center;'>Nenhum dado disponível para exibir o gráfico.</p>";
@@ -49,17 +67,12 @@
             <strong class="vision2">VISION</strong>
         </div>
         <div class="name-usuario3">
-            <h1><?php
-            if (empty($_SESSION['nome_usuario'])) {
-                echo "ENERVISION";
-            } else {
-                echo $_SESSION['nome_usuario'];
-            }
-            ?></h1>
-        </div>
-        <div class="buttons">
+            <h1>
+                <?php echo empty($_SESSION['nome_usuario']) ? "ENERVISION" : $_SESSION['nome_usuario']; ?>
+            </h1>
         </div>
     </nav>
+
     <div class="container-grafico">
         <div class="fundograf">
             <div class="formulariograf">
@@ -71,23 +84,26 @@
                     <button type="submit">Cadastrar</button>
                 </form>
             </div>
-            <div id="columnchart_values" style="width: 900px; height: 300px;"></div>
+
+            <!-- Gráfico Responsivo -->
+            <div id="columnchart_values" class="grafico-mobile"></div>
 
             <h3>Dados Cadastrados:</h3>
-            <div style="margin-top: 75px">
-                <?php
-                // Para depuração, exibe os dados recuperados
-                
-
-                if (!empty($dados)) { ?>
+            <div style="margin-top: 10px">
+                <?php if (!empty($dados)) { ?>
                     <ul>
                         <?php foreach ($dados as $dado) { ?>
                             <li>
                                 <?php echo $dado['mes'] . " - Consumo: " . number_format($dado['kilowatts'], 2) . " kW"; ?>
                                 <form method="POST" style="display:inline;">
                                     <input type="hidden" name="delete_mes" value="<?php echo $dado['mes']; ?>">
-                                    <button type="submit"
-                                        onclick="return confirm('Tem certeza que deseja excluir este dado?');">Deletar</button>
+                                    <button class="deletar" type="submit" onclick="return confirm('Tem certeza que deseja excluir este dado?');">Deletar</button>
+                                    <style>
+                                        .deletar button {
+                                            gap: 10px;
+                                            margin: 10px;
+                                        }
+                                    </style>
                                 </form>
                             </li>
                         <?php } ?>
@@ -96,8 +112,9 @@
                     <p>Nenhum dado cadastrado ainda.</p>
                 <?php } ?>
             </div>
-
+            <br><br>
             <h3>Comparação de Consumo entre Meses:</h3>
+            <br>
             <?php
             if (!empty($dados) && count($dados) > 1) {
                 for ($i = 0; $i < count($dados) - 1; $i++) {
