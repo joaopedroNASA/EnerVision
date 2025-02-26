@@ -17,34 +17,21 @@ session_start();
 <body>
 
     <nav class="nav-bar2">
-        <div class="logo">
+        <div class="logo2">
             <img src="img/Enervision.png" alt="">
         </div>
-        <div class="name-usuario">
-            <h1><?php 
-                if (empty($_SESSION['nome_usuario'])) {
-                    echo "ENERVISION";
-                } else {
-                    echo $_SESSION['nome_usuario'];
-                }   
-            ?></h1>
+        <div class="name-usuario2">
+            <strong><p>ENERVISION</p></strong>
         </div>
-           <style>
-            @media screen and (max-width: 1024px) {
-                
-            }
-           </style>
         </div>
-        <div class="buttons">
-            <button class="dark-btn"><i class="fa-solid fa-moon"></i></button>
+        <div class="buttons2">
             <?php
-
-if (isset($_SESSION['id_usuario'])) {
-    echo "<a href='view/logout.php'><button>Logout</button></a>";
-} else {
-    echo "<a href='view/login.php'><button>Login</button></a>";
-} ?>
-            
+            if (isset($_SESSION['id_usuario'])) {
+                echo "<a href='view/logout.php'><button>Sair</button></a>";
+            } else {
+                echo "<a href='view/login.php'><button>Login</button></a>";
+            } ?>
+            <button class="dark-btn"><i class="fa-solid fa-moon"></i></button>
         </div>
     </nav>
     <div class="imagem">

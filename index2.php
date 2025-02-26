@@ -26,21 +26,20 @@ session_start();
             <strong class="vision">VISION</strong>
         </div>
         <div class="name-usuario">
-            <h1><?php 
-          if (empty($_SESSION['nome_usuario'])) {
-            echo "ENERVISION";
-        } else {
-            echo $_SESSION['nome_usuario'];
-        }   
-            ?></h1>
+            <h1><?php
+                if (empty($_SESSION['nome_usuario'])) {
+                    echo "ENERVISION";
+                } else {
+                    echo $_SESSION['nome_usuario'];
+                }
+                ?></h1>
         </div>
         <div class="buttons">
-            
-           <?php if (isset($_SESSION['id_usuario'])) {
-    echo "<a href='view/login.php'><button>Login</button></a>";
-} else {
-    echo "<a href='view/logout.php'><button>Logout</button></a>";
-} ?>
+            <?php if (isset($_SESSION['id_usuario'])) {
+                echo "<button><a href='view/login.php'>Login</a></button>";
+            } else {
+                echo "<button><a href='view/logout.php'>Sair</a></button>";
+            } ?>
             <button class="dark-btn"><i class="fa-solid fa-moon"></i></button>
         </div>
         <div>

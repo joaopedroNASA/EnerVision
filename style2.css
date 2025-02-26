@@ -2,6 +2,7 @@ body {
     padding: 0;
     margin: 0;
     background-color: #515D69;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .nav-bar {
@@ -12,12 +13,12 @@ body {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 20px;
     color: white;
-    width: 100vw;
+
 }
 
 .nav-bar2 {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     text-align: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -32,8 +33,7 @@ body {
     align-items: center;
     gap: 20px;
     position: relative;
-    right: 20px;
-    bottom: 10px;
+    right: -260px;
     background-color: #515D69;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
@@ -41,6 +41,27 @@ body {
 }
 
 .buttons button {
+    background-color: #515D69;
+    color: white;
+    border: none;
+    font-size: 20px;
+}
+
+.buttons2 {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    right: 40px;
+    bottom: 5px;
+    background-color: #515D69;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+}
+
+.buttons2 button {
     background-color: #515D69;
     color: white;
     border: none;
@@ -86,9 +107,21 @@ body {
     justify-content: center;
     text-align: center;
     align-items: center;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 30px;
     position: relative;
-    left: 200px;
+    left: 80px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.name-usuario2 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    font-size: 45px;
+    position: relative;
+    left: -30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .imagem img {
@@ -174,6 +207,7 @@ a {
     box-shadow: 10px 10px 40px;
     padding: 10px;
     width: 570px;
+    color: black;
 }
 
 .Consumo-diario2 input,
@@ -181,7 +215,7 @@ option {
     background-color: rgba(128, 128, 128, 0.5);
     border: none;
     border-radius: 8px;
-    color: #828282;
+    color: black;
     height: 30px;
 }
 
@@ -844,6 +878,30 @@ footer {
 @media screen and (max-width: 1024px) {
 
     /*index*/
+    .nav-bar2 {
+        gap: 0;
+        margin: 0;
+        padding: 0;
+    }
+.buttons2{
+    position: relative;
+    left: -10px;
+}
+    .name-usuario2 {
+        font-size: 20px;
+        margin: 10px;
+    }
+
+    .logo2 {
+        position: relative;
+        right: 20px;
+        top: 10px;
+    }
+    .logo2 img{
+        height: 100px;
+        width: 150px;
+
+    }
 
     /*IMAGEM DO CARROSSEL*/
     .imagem img {
@@ -904,14 +962,32 @@ footer {
     /* index2 */
 
     .nav-bar {
-        gap: 0px;
         display: flex;
         justify-content: center;
         align-items: center;
+        text-align: center;
+    }
+
+    .name-usuario h1 {
+        font-size: 20px;
+        position: relative;
+        right: 130px;
+    }
+
+    .buttons {
+        position: relative;
+        right: -0px;
     }
 
     .logo {
-        gap: 0;
+        position: relative;
+        right: 50px;
+    }
+
+    .logo img {
+        height: 80px;
+        width: 120px;
+        margin: 5px;
     }
 }
 
