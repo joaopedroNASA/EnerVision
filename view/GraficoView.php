@@ -44,11 +44,11 @@
 
     <nav class="nav-bar">
         <div class="logo">
-            <strong class="ener">ENER</strong>
+            <strong class="ener2">ENER</strong>
             <a href="index2.php"><img src="img/Enervision.png"></a>
-            <strong class="vision">VISION</strong>
+            <strong class="vision2">VISION</strong>
         </div>
-        <div class="name-usuario">
+        <div class="name-usuario3">
             <h1><?php
             if (empty($_SESSION['nome_usuario'])) {
                 echo "ENERVISION";
@@ -58,13 +58,6 @@
             ?></h1>
         </div>
         <div class="buttons">
-
-            <?php if (isset($_SESSION['id_usuario'])) {
-                echo "<a href='view/login.php'><button>Login</button></a>";
-            } else {
-                echo "<a href='view/logout.php'><button>Logout</button></a>";
-            } ?>
-            <button class="dark-btn"><i class="fa-solid fa-moon"></i></button>
         </div>
     </nav>
     <div class="container-grafico">

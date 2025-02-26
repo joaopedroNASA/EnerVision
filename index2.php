@@ -34,7 +34,7 @@ session_start();
             <?php if (isset($_SESSION['id_usuario'])) {
                 echo "<a href='view/login.php'><button>Login</button></a>";
             } else {
-                echo "<a href='view/logout.php'><button>Logout</button></a>";
+                echo "<a href='view/logout.php'><button>Sair</button></a>";
             } ?>
         </div>
         <div>

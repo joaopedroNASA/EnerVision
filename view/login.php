@@ -25,7 +25,7 @@
             <h1>LOGIN</h1>
             <form class="form" action="" method="POST">
                 <input type="email" name="email_usuario" placeholder="Email">
-                <input type="password" name="senha_usuario" placeholder="Password">
+                <input type="password" name="senha_usuario" placeholder="Senha">
                 <button class="button" type="submit">Login</button>
                 <a href="cadastro.php" class="button"><button type="button" class="button">Criar</button></a>
             </form>

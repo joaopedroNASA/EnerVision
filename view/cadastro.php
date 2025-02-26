@@ -25,9 +25,9 @@
             <div class="login">
                 <h1>REGISTER</h1>
                 <form class="form" action=""  method="POST">
-                    <input type="name" name="nome_usuario" placeholder="Name">
+                    <input type="name" name="nome_usuario" placeholder="Nome">
                     <input type="email" name="email_usuario"  placeholder="Email">
-                    <input type="password" name="senha_usuario" placeholder="Password">
+                    <input type="password" name="senha_usuario" placeholder="Senha">
                     <input class="button" type="submit">
                     <a href="../index.php"><button class="button">Voltar</button></a>
                 </form>

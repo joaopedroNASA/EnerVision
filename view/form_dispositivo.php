@@ -121,11 +121,11 @@ if (isset($_GET['kw']) && isset($_GET['dias'])) {
 
     <nav class="nav-bar">
         <div class="logo">
-            <strong class="ener">ENER</strong>
+            <strong class="ener2">ENER</strong>
             <a href="../index2.php"><img src="../img/Enervision.png"></a>
-            <strong class="vision">VISION</strong>
+            <strong class="vision2">VISION</strong>
         </div>
-        <div class="name-usuario">
+        <div class="name-usuario3">
             <h1><?php 
                 if (empty($_SESSION['nome_usuario'])) {
                     echo "ENERVISION";
