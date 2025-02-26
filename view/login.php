@@ -23,14 +23,12 @@
         <div class="login">
             <h1>LOGIN</h1>
             <form class="form" action="" method="POST">
-                <input type="email" name="email_usuario" placeholder="Email" required>
-                <input type="password" name="senha_usuario" placeholder="Password" required>
+                <input type="email" name="email_usuario" placeholder="Email">
+                <input type="password" name="senha_usuario" placeholder="Password">
                 <button class="button" type="submit">Login</button>
+                <a href="cadastro.php"><button class="button">Criar</button></a>
             </form>
-
-            <!-- Link para a página de cadastro fora do formulário -->
-            <a href="cadastro.php"><button class="button">Criar</button></a>
-
+            
             <?php
             require_once 'C:\Turma2\xampp\htdocs\EnerVision\config.php';
             require_once 'C:\Turma2\xampp\htdocs\EnerVision\controller\DispositivoController.php';
