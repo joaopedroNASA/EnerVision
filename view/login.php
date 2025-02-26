@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css">
-    <title></title>
+    <title>Login - EnerVision</title>
 </head>
 
 <body>
@@ -14,40 +14,39 @@
         <strong>
             <p class="ener">ENER</p>
         </strong>
-        <img src="../img/Enervision.png" alt="">
+        <img src="../img/Enervision.png" alt="Logo EnerVision">
         <strong>
             <p class="vision">VISION</p>
         </strong>
     </nav>
+
     <section class="page-login">
         <div class="login">
             <h1>LOGIN</h1>
             <form class="form" action="" method="POST">
-                <input type="email" name="email_usuario" placeholder="Email">
-                <input type="password" name="senha_usuario" placeholder="Password">
+                <input type="email" name="email_usuario" placeholder="Email" required>
+                <input type="password" name="senha_usuario" placeholder="Password" required>
                 <button class="button" type="submit">Login</button>
-                <a href="cadastro.php"><button class="button">Criar</button></a>
             </form>
-            
+            <a href="cadastro.php" class="button">Criar</a>
+
             <?php
             require_once 'C:\Turma2\xampp\htdocs\EnerVision\config.php';
             require_once 'C:\Turma2\xampp\htdocs\EnerVision\controller\DispositivoController.php';
 
-            if (isset($_POST["email_usuario"]) && isset($_POST["senha_usuario"])) {
+            if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["email_usuario"], $_POST["senha_usuario"])) {
                 $dispositivoController = new DispositivoController($pdo);
 
                 if ($dispositivoController->login($_POST["email_usuario"], $_POST["senha_usuario"])) {
                     header("Location: ../index2.php");
                     exit;
                 } else {
-                    echo "Usuário ou senha inválidos.";
+                    echo "<p class='erro'>Usuário ou senha inválidos.</p>";
                 }
             }
             ?>
         </div>
     </section>
-
-
 
 </body>
 
