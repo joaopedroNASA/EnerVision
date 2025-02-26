@@ -24,11 +24,12 @@
         <div class="login">
             <h1>LOGIN</h1>
             <form class="form" action="" method="POST">
-                <input type="email" name="email_usuario" placeholder="Email" required>
-                <input type="password" name="senha_usuario" placeholder="Password" required>
+                <input type="email" name="email_usuario" placeholder="Email">
+                <input type="password" name="senha_usuario" placeholder="Password">
                 <button class="button" type="submit">Login</button>
+                <a href="cadastro.php" class="button"><button type="button" class="button">Criar</button></a>
             </form>
-            <a href="cadastro.php" class="button">Criar</a>
+            
 
             <?php
             require_once 'C:\Turma2\xampp\htdocs\EnerVision\config.php';

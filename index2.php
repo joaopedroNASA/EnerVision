@@ -36,7 +36,6 @@ session_start();
             } else {
                 echo "<a href='view/logout.php'><button>Logout</button></a>";
             } ?>
-            <button class="dark-btn"><i class="fa-solid fa-moon"></i></button>
         </div>
         <div>
 
